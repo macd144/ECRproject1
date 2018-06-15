@@ -1,0 +1,26 @@
+ECR Assignment 1
+PROPOSED PAGES FOR SCHOOL ADMISSION WEBSITE
+HOME
+
+ACADEMICS
+	-Staff login
+	-Student's Login
+
+ADMISSION
+	-Application for 2019/2020 Admission
+	-Admission Requirement
+	-Academic Brief
+
+FAQ
+	-Courses
+	-Colleges
+	-Accomodation
+	-fees
+
+NEWS
+	-School News
+	-Student's chatroom
+
+CONTACT
+
+ABOUT
