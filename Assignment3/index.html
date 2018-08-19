@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA Compatible" content="IE=edge">
+	<meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+	<title>Assignment3</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/fontawesome.css">
+</head>
+<body>
+	
+	<div class="container-fluid">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<form class="form" name="form1">
+						<table class="table table-bordered" id="calculator">
+							<thead>
+								<tr >
+									<td colspan="5"><input type="text" name="result" class="form-control well" disabled></td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><button  type="button" class="btn btn-success btn-lg"value="1" onclick="number(value)"> 1 </button></td>
+									<td><button type="button" class="btn btn-success btn-lg" value="2" onclick="number(value)"> 2 </button></td>
+									<td><button type="button" class="btn btn-success btn-lg" value="3" onclick="number(value)"> 3 </button></td>
+									<td><button type="button" class="btn btn-danger btn-lg" value="*" style="width: 100%" onclick="number(value)"> * </button></td>
+									<td><button type="button" class="btn btn-danger btn-lg" style="width: 100%" value="/" onclick="number(value)"> / </button></td>
+								</tr>
+								<tr>
+									<td><button type="button" class="btn btn-success btn-lg" value="4" onclick="number(value)"> 4 </button></td>
+									<td><button type="button" class="btn btn-success btn-lg" value="5" onclick="number(value)"> 5 </button></td>
+									<td><button type="button" class="btn btn-success btn-lg" value="6" onclick="number(value)"> 6 </button></td>
+									<td colspan="2"><button type="button" class="btn btn-danger btn-lg" style="width: 100%" value="+" onclick="number(value)"> + </button></td>
+								</tr>
+								<tr>
+									<td><button type="button" class="btn btn-success btn-lg" value="7" onclick="number(value)"> 7 </button></td>
+									<td><button type="button" class="btn btn-success btn-lg" value="8" onclick="number(value)"> 8 </button></td>
+									<td><button type="button" class="btn btn-success btn-lg" value="9" onclick="number(value)"> 9 </button></td>
+									<td><button type="button" class="btn btn-danger btn-lg" style="width: 100%" value="-" onclick="number(value)"> - </button></td>
+									<td><button type="button" class="btn btn-danger btn-lg" style="width: 100%" value="%" onclick="number(value)"> % </button></td>
+								</tr>
+								<tr>
+									<td colspan="2"><button type="button" class="btn btn-lg btn-success" style="width: 100%" value="0" onclick="number(value)">0</button></td>
+									<td><button type="button" class="btn btn-lg btn-success" style="width: 100%" value="." onclick="number(value)">.</button></td>
+									<td><button type="button" class="btn btn-default btn-lg" style="width: 100%" value="" onclick="cle(' ')">C</button></td>
+									<td><button type="button" class="btn btn-warning btn-lg" style="width: 100%" onclick="evalua()"> = </button></td>
+								</tr>
+							</tbody>
+						</table>
+							
+						</form>
+					</div>
+					<!---
+					<div class="col-md-4 jumbotron">
+						<h3>Javascript form validation examples</h3>
+						<form class="form-horizontal" role="form">
+							<div class="input-group">
+								<label class="label-control" for="username">Enter Your Full Name</label>
+								<input type="text" class="form-control" required id="username" value="">
+							</div>
+							<br>
+							<div class="col-md-6">
+								<div class="input-group">
+									<label class="label-control"></label>
+									<input type="number" name="agn" id="check" class="form-control" placeholder="Enter Your Age">
+								</div>
+							</div>
+							<div class="btn-group">
+								<label><button class="btn btn-success" type="button" onclick="very()"><i class="glyphicon glyphicon-arrow-right"></i></button> Click to proceed</label>
+							</div>
+							<div>
+								<p id="gud" style="color: green"></p>
+								<p id="error" style="color: red"></p>
+							</div>
+							
+							<button type="button" class="btn btn-success" onclick="Submit()">Submit</button>
+						</form>
+						<div>
+							<p class="well" id="outcome"></p>
+						</div>
+					</div>
+					--->
+					<div class="col-md-8">
+						<h3>Enter Margin Time</h3>
+						<form>
+							<div class="col-md-2">
+								<input type="number" name="" class="form-control" id="yr" min="1900" max="2050">
+								<p class="form-control-static">Year</p>
+							</div>
+							<div class="col-md-2">
+								<input type="text" name="" class="form-control" id="month">
+								<p class="form-control-static">Mouth</p>
+							</div>
+							<div class="col-md-2">
+								<input type="number" name="" class="form-control" id="day" min="1" max="32">
+								<p class="form-control-static">Day</p>
+							</div>
+							<div class="col-md-2">
+								<input type="number" name="" class="form-control" id="hour" min="0" max="24">
+								<p class="form-control-static">Hour</p>
+							</div>
+							<div class="col-md-2">
+								<input type="number" name="" class="form-control" id="mins" minl="0" max="60">
+								<p class="form-control-static">Minutes</p>
+							</div>
+							<div class="col-md-2">
+								<input type="number" name="" class="form-control" id="secs" min="0" max="60">
+								<p class="form-control-static">Seconds</p>
+							</div>
+							<button class="btn btn-success btn-lg" type="button" onclick="startcounter();">Click to Start Countdown</button>
+							<p id="counttimer"></p>
+						</form>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+	<script type="text/javascript">
+		function startcounter(){
+var years = getElementById('yr').value;
+var month = getElementById('month').value;
+var day = getElementById('day').value;
+var hour = getElementById('hour').value;
+var mins = getElementById('mins').value;
+var secs = getElementById('secs').value;
+
+var time = month+" "+day+","+years+" "+hour+":"+mins+":"+secs;
+CountDownDate = new Date(time).getTime();
+
+//console.log(CountDownDate);
+//Updating the countdown every second
+var x=setInterval(function(){
+	//Todays Date and time
+	var now = new Date().getTime();
+	//console.log(now);
+	var distance=CountDownDate-now;
+
+	var days=Math.floor(distance/(1000*60*60*24)); //86,400,000 millisec   1 day
+	var hours=Math.floor((distance % (1000*60*60*24)) / (1000*60*60));    //24 hours
+	var min = Math.floor((distance % (1000*60*60)) / (1000*60));  //mins
+	var sec = Math.floor((distance % (1000 * 60)) / 1000);
+
+document.getElementById('counttimer').innerHTML= days + " : " + hours + " : " + min + " : " + sec;
+},1000);
+
+}
+	</script>
+	<!--
+<script type="text/javascript" src="js/main.js"></script>
+-->
+</body>
+</html>
