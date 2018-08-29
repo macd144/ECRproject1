@@ -1,4 +1,4 @@
-/*
+
 function  number(value){
 	document.form1.result.value +=value;
 }
@@ -31,16 +31,16 @@ function Submit(){
 	age=Number(document.getElementById('check').value)
 	document.getElementById('outcome').innerHTML="Hello"+" "+name+" "+"You are"+" "+age+" "+"Years Old"+" "+"and qualified to Drive";
 }
-var CountDownDate=new Date("Aug 18, 2018 15:00:25").getTime();
-*/
+//var CountDownDate=new Date("Aug 18, 2018 15:00:25").getTime();
 //Setting date we're counting from
-function startcount(){
-var years = getElementById("year").value;
-var month = getElementById('month').value;
-var day = getElementById('day').value;
-var hour = getElementById('hour').value;
-var mins = getElementById('mins').value;
-var secs = getElementById('secs').value;
+
+function startcounter(){
+var years = document.getElementById("yr").value;
+var month = document.getElementById('month').value;
+var day = document.getElementById('day').value;
+var hour = document.getElementById('hour').value;
+var mins = document.getElementById('mins').value;
+var secs = document.getElementById('secs').value;
 
 var time =month+" "+day+","+years+" "+hour+":"+mins+":"+secs;
 CountDownDate = new Date(time).getTime();
@@ -57,7 +57,8 @@ var x=setInterval(function(){
 	var hours=Math.floor((distance % (1000*60*60*24)) / (1000*60*60));    //24 hours
 	var min = Math.floor((distance % (1000*60*60)) / (1000*60));  //mins
 	var sec = Math.floor((distance % (1000 * 60)) / 1000);
+	var msec = Math.floor(distance / 1000);
 
-document.getElementById('counttimer').innerHTML= days + " : " + hours + " : " + min + " : " + sec;
+document.getElementById('counttimer').innerHTML= days + " : " + hours + " : " + min + " : " + sec+":"+msec;
 },1000)
 }
